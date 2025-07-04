@@ -11,12 +11,28 @@ android {
         versionName "2.2.2"
         setProperty("archivesBaseName", "DesignerTools-$versionName")
     }
+
+    signingConfigs {
+        release {
+            storeFile file(System.getenv("KEYSTORE_PATH") ?: "release-keystore.jks")
+            storePassword System.getenv("KEYSTORE_PASSWORD") ?: "your_store_password"
+            keyAlias System.getenv("KEY_ALIAS") ?: "your_key_alias"
+            keyPassword System.getenv("KEY_PASSWORD") ?: "your_key_password"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable false
+        }
+        debug {
+            debuggable true
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
