@@ -62,8 +62,8 @@ public class ColorPickerOverlay extends Service {
     private static final int NOTIFICATION_ID = ColorPickerOverlay.class.hashCode();
     private static final String CHANNEL_ID = "DesignerTools.ColorPickerOverlay";
 
-    private static final String ACTION_HIDE_PICKER = "hide_picker";
-    private static final String ACTION_SHOW_PICKER = "show_picker";
+    private static final String ACTION_HIDE_PICKER = "com.scheffsblend.designertools.action.HIDE_COLOR_PICKER_OVERLAY";
+    private static final String ACTION_SHOW_PICKER = "com.scheffsblend.designertools.action.SHOW_COLOR_PICKER_OVERLAY";
 
     private static final float DAMPENING_FACTOR_DP = 25.0f;
 

@@ -47,8 +47,8 @@ public class GridOverlay extends Service {
     private static final int NOTIFICATION_ID = GridOverlay.class.hashCode();
     private static final String CHANNEL_ID = "DesignerTools.GridOverlay";
 
-    private static final String ACTION_HIDE_OVERLAY = "hide_grid_overlay";
-    private static final String ACTION_SHOW_OVERLAY = "show_grid_overlay";
+    private static final String ACTION_HIDE_OVERLAY = "com.scheffsblend.designertools.action.HIDE_GRID_OVERLAY";
+    private static final String ACTION_SHOW_OVERLAY = "com.scheffsblend.designertools.action.SHOW_GRID_OVERLAY";
 
     private WindowManager mWindowManager;
     private GridOverlayView mOverlayView;

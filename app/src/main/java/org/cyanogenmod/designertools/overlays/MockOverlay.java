@@ -44,8 +44,8 @@ public class MockOverlay extends Service {
     private static final int NOTIFICATION_ID = MockOverlay.class.hashCode();
     private static final String CHANNEL_ID = "DesignerTools.MockOverlay";
 
-    private static final String ACTION_HIDE_OVERLAY = "hide_mock_overlay";
-    private static final String ACTION_SHOW_OVERLAY = "show_mock_overlay";
+    private static final String ACTION_HIDE_OVERLAY = "com.scheffsblend.designertools.action.HIDE_MOCK_OVERLAY";
+    private static final String ACTION_SHOW_OVERLAY = "com.scheffsblend.designertools.action.SHOW_MOCK_OVERLAY";
 
     private WindowManager mWindowManager;
     private MockOverlayView mOverlayView;

@@ -62,6 +62,17 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".receiver.OverlayReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.scheffsblend.designertools.action.SHOW_GRID_OVERLAY"/>
+                <action android:name="com.scheffsblend.designertools.action.HIDE_GRID_OVERLAY"/>
+                <action android:name="com.scheffsblend.designertools.action.SHOW_MOCK_OVERLAY"/>
+                <action android:name="com.scheffsblend.designertools.action.HIDE_MOCK_OVERLAY"/>
+                <action android:name="com.scheffsblend.designertools.action.SHOW_COLOR_PICKER_OVERLAY"/>
+                <action android:name="com.scheffsblend.designertools.action.HIDE_COLOR_PICKER_OVERLAY"/>
+            </intent-filter>
+        </receiver>
+
         <service android:name=".overlays.GridOverlay" />
 
         <service android:name=".overlays.MockOverlay" />
