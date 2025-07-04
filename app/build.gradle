@@ -5,11 +5,11 @@ android {
 
     defaultConfig {
         applicationId "com.scheffsblend.designertools"
-        minSdkVersion 24
-        targetSdkVersion 33
-        versionCode 6
-        versionName "2.2.2"
-        setProperty("archivesBaseName", "DesignerTools-$versionName")
+        minSdk  33
+        targetSdk  33
+        versionCode 7
+        versionName "2.2.5"
+        archivesBaseName = "DesignerTools-$versionName"
     }
 
     signingConfigs {
@@ -36,14 +36,17 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-        allWarningsAsErrors false
         compilerArgs += ["-Xlint:deprecation"]
     }
+
+    lintOptions {
+        warningsAsErrors false
+    }
+
     dependenciesInfo {
         includeInApk true
         includeInBundle true
     }
-    buildToolsVersion '33.0.0'
     namespace 'org.cyanogenmod.designertools'
 }
 
