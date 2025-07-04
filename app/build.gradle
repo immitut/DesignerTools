@@ -5,8 +5,8 @@ android {
 
     defaultConfig {
         applicationId "com.scheffsblend.designertools"
-        minSdk  33
-        targetSdk  33
+        minSdk 33
+        targetSdk 33
         versionCode 7
         versionName "2.2.5"
         archivesBaseName = "DesignerTools-$versionName"
@@ -36,7 +36,6 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-        compilerArgs += ["-Xlint:deprecation"]
     }
 
     lintOptions {
@@ -47,9 +46,14 @@ android {
         includeInApk true
         includeInBundle true
     }
+
     namespace 'org.cyanogenmod.designertools'
 }
 
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs.add("-Xlint:deprecation")
+}
+ 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
